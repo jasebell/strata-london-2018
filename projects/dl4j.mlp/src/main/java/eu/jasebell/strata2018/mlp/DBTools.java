@@ -16,7 +16,7 @@ public class DBTools {
 
     public static void writeLinearResults(String uuid, double intercept, double slope, double r2, long time, String output) {
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/strata2018?user=root&password=admin");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/strata2018?user=xxxx&password=xxxx");
 
             PreparedStatement pstmt = conn.prepareStatement("INSERT INTO training_log VALUES (null, ?, NOW(), ?, ?, ?, ?, ?)");
             pstmt.clearParameters();
@@ -46,7 +46,7 @@ public class DBTools {
 
     public static void writeResultsToDB(String uuid, double evalsplit, long exectime, double accuracy, String output, String model_type){
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/strata2018?user=root&password=admin");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/strata2018?user=xxxx&password=xxxx");
             PreparedStatement pstmt = conn.prepareStatement("INSERT INTO training_log VALUES (null, ?, NOW(), ?, ?, ?, ?, ?)");
             pstmt.clearParameters();
             pstmt.setString(1, uuid);
