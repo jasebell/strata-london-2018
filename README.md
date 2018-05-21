@@ -32,6 +32,8 @@ The project uses a mixture of Java (for the model creation) and Clojure (for Kaf
 
 ## General order of build
 
+Before you start please change the username/password values to a user on your MySQL database.
+
 1. Create a directory to store persisted events.
 2. Create a directory to save training data.
 3. Create a directory for the generated models.
